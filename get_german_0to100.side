@@ -1,0 +1,141 @@
+{
+  "id": "9e0d586b-619a-4278-9fb4-dd60e3c98a3a",
+  "version": "2.0",
+  "name": "get_german_0to100",
+  "url": "https://soundoftext.com",
+  "tests": [{
+    "id": "4b47b26e-a6f9-447a-a7fc-955190fb9e26",
+    "name": "german1",
+    "commands": [{
+      "id": "1e7e1f7c-42da-495f-8a77-64da4ed44da1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b16cb4b6-6c4c-48a2-b065-865f8893c595",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a8b49af-389f-400e-9f7f-8d944b9df642",
+      "comment": "",
+      "command": "click",
+      "target": "name=voice",
+      "targets": [
+        ["name=voice", "name"],
+        ["css=.field__select", "css:finder"],
+        ["xpath=//select[@name='voice']", "xpath:attributes"],
+        ["xpath=//section[@id='app']/div/div/form/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "151ccfb1-2a5a-4e90-9637-213a527f26f0",
+      "comment": "",
+      "command": "select",
+      "target": "name=voice",
+      "targets": [],
+      "value": "label=German"
+    }, {
+      "id": "67dadf0b-6a89-4dfa-a840-596fc5ea78dc",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "c11cf365-4226-44f0-b83d-c5d49a76b403",
+      "comment": "",
+      "command": "while",
+      "target": "${count}<=100",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c53901a-da78-4c1d-ba85-6f8f4772dfeb",
+      "comment": "",
+      "command": "click",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.field__textarea", "css:finder"],
+        ["xpath=//textarea[@name='text']", "xpath:attributes"],
+        ["xpath=//section[@id='app']/div/div/form/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2de896f6-9e72-4c90-b9d9-316d369b84d9",
+      "comment": "",
+      "command": "type",
+      "target": "name=text",
+      "targets": [
+        ["name=text", "name"],
+        ["css=.field__textarea", "css:finder"],
+        ["xpath=//textarea[@name='text']", "xpath:attributes"],
+        ["xpath=//section[@id='app']/div/div/form/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${count}"
+    }, {
+      "id": "91493b82-6add-49a2-9246-ad3a650b6adb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.field__submit",
+      "targets": [
+        ["css=.field__submit", "css:finder"],
+        ["xpath=//input[@value='Submit']", "xpath:attributes"],
+        ["xpath=//section[@id='app']/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b60d3bc-1099-4e8a-9c42-dd915469b476",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sound .card__action:nth-child(2)",
+      "targets": [
+        ["css=.sound .card__action:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Download')]", "xpath:link"],
+        ["xpath=//section[@id='app']/div[2]/div/div/div[2]/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://storage.soundoftext.com/1ba1d410-c52e-11eb-94a3-5f80760f9038.mp3')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "100478af-9055-4f3a-b46e-0a20f40d7be6",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b536632-7a48-4bc1-8c90-508ea87d07f3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return + ${count} + 1",
+      "targets": [],
+      "value": "count"
+    }, {
+      "id": "a56cb498-df15-4ee2-b605-a2b13c3bef9d",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "967d0454-df93-48fe-8aa7-f478a58ad7f6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4b47b26e-a6f9-447a-a7fc-955190fb9e26"]
+  }],
+  "urls": ["https://soundoftext.com/"],
+  "plugins": []
+}
